@@ -32,7 +32,7 @@ $ uuid-tool
 fafae80e-a308-120d-99fa-07ecd010e2b0
 ```
 
-#### generate multiple v4 UUIDs (-c <count>)
+#### generate multiple v4 UUIDs (-c [count])
 ```bash
 $ uuid-tool -c 3
 b723aaef-0811-bbbc-7d6b-69555a683af8
