@@ -1,0 +1,24 @@
+name: uuid-tool
+base: core18
+version: 'v0.0.0'
+summary: CLI tool for generating v4 UUID values.
+description: |
+  uuid-tool is a tool for generating v4 UUID values.
+
+grade: stable
+confinement: strict
+architectures:
+  - amd64
+
+apps:
+  uuid-tool:
+    command: bin/uuid-tool
+
+parts:
+  uuid-tool:
+    plugin: go
+    go-channel: 1.13/stable
+    source-tag: v0.0.0
+    go-packages: [github.com/shoenig/uuid-tool]
+    build-packages:
+      - git
