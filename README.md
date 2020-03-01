@@ -9,6 +9,9 @@ Use `uuid-tool` to generate v4 UUIDs on the command line.
 ![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/uuid-tool.svg)
 ![GitHub](https://img.shields.io/github/license/shoenig/uuid-tool.svg)
 
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/uuid-tool)
+
 # Project Overview
 
 Module `gophers.dev/cmds/uuid-tool` provides a command-line utility for generating
@@ -19,7 +22,14 @@ library for v4 UUID generation.
 
 # Getting Started
 
-The `uuid-tool` command can be installed by running
+#### Install from SnapCraft
+The `uuid-tool` command can be installed as a snap
+```bash
+$ sudo snap install uuid-tool
+```
+
+#### Build from source
+The `uuid-tool` command can be compiled by running
 ```bash
 $ go get gophers.dev/cmds/uuid-tool
 ```
