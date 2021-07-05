@@ -31,7 +31,7 @@ $ sudo snap install uuid-tool
 #### Build from source
 The `uuid-tool` command can be compiled by running
 ```bash
-$ go get gophers.dev/cmds/uuid-tool
+$ go install gophers.dev/cmds/uuid-tool@latest
 ```
 
 # Example Usages
