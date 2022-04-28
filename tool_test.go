@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/stretchr/testify/require"
+	"github.com/shoenig/test"
 )
 
 func Test_name(t *testing.T) {
@@ -13,7 +13,7 @@ func Test_name(t *testing.T) {
 
 	try := func(t *testing.T, input, exp string) {
 		result := name(input)
-		require.Equal(t, exp, result)
+		test.EqCmp(t, exp, result)
 	}
 
 	t.Run("relative path", func(t *testing.T) {
@@ -31,11 +31,11 @@ func Test_generateOne(t *testing.T) {
 	try := func(t *testing.T, newline bool) {
 		var buf bytes.Buffer
 		err := generateOne(&buf, newline)
-		require.NoError(t, err)
+		test.NoError(t, err)
 		result := buf.String()
-		require.Equal(t, 37, len(result))
+		test.EqCmp(t, 37, len(result))
 		endsNewline := strings.HasSuffix(result, "\n")
-		require.Equal(t, newline, endsNewline)
+		test.EqCmp(t, newline, endsNewline)
 	}
 
 	t.Run("with newline", func(t *testing.T) {
@@ -52,7 +52,7 @@ func Test_generate(t *testing.T) {
 
 	var buf bytes.Buffer
 	err := generate(&buf, 10, true)
-	require.NoError(t, err)
+	test.NoError(t, err)
 	result := buf.String()
-	require.Equal(t, 37*10, len(result))
+	test.EqCmp(t, 37*10, len(result))
 }
