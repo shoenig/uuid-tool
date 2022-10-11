@@ -1,4 +1,4 @@
-module gophers.dev/cmds/uuid-tool
+module github.com/shoenig/uuid-tool
 
 go 1.19
 
