@@ -2,3 +2,5 @@ uuid-tool
 
 **/*.snap
 
+dist/
+output/

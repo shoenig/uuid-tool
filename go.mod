@@ -1,6 +1,6 @@
 module gophers.dev/cmds/uuid-tool
 
-go 1.18
+go 1.19
 
 require (
 	github.com/hashicorp/go-uuid v1.0.1
