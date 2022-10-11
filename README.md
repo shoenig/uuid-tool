@@ -3,10 +3,6 @@ uuid-tool
 
 Use `uuid-tool` to generate v4 UUIDs on the command line.
 
-[![Go Report Card](https://goreportcard.com/badge/gophers.dev/cmds/uuid-tool)](https://goreportcard.com/report/gophers.dev/cmds/uuid-tool)
-[![Build Status](https://travis-ci.org/shoenig/uuid-tool.svg?branch=master)](https://travis-ci.org/shoenig/uuid-tool)
-[![GoDoc](https://godoc.org/gophers.dev/cmds/uuid-tool?status.svg)](https://godoc.org/gophers.dev/cmds/uuid-tool)
-![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/uuid-tool.svg)
 ![GitHub](https://img.shields.io/github/license/shoenig/uuid-tool.svg)
 
 
@@ -14,13 +10,17 @@ Use `uuid-tool` to generate v4 UUIDs on the command line.
 
 # Project Overview
 
-Module `gophers.dev/cmds/uuid-tool` provides a command-line utility for generating
+Module `github.com/shoenig/uuid-tool` provides a command-line utility for generating
 v4 UUIDs.
 
 Under the hood, `uuid-tool` makes use of HashiCorp's [go-uuid](https://github.com/hashicorp/go-uuid)
 library for v4 UUID generation.
 
 # Getting Started
+
+#### Install from Releases
+
+The `uuid-tool` command can be downloaded from the [Releases](https://github.com/shoenig/uuid-tool/releases) page.
 
 #### Install from SnapCraft
 The `uuid-tool` command can be installed as a snap
@@ -31,7 +31,7 @@ $ sudo snap install uuid-tool
 #### Build from source
 The `uuid-tool` command can be compiled by running
 ```bash
-$ go install gophers.dev/cmds/uuid-tool@latest
+$ go install github.com/shoenig/uuid-tool@latest
 ```
 
 # Example Usages
@@ -57,9 +57,9 @@ $ uuid-tool -n | pcbopy
 ```
 
 # Contributing
-The `gophers.dev/cmds/uuid-tool` module is always improving with new features
+The `github.com/shoenig/uuid-tool` module is always improving with new features
 and error corrections. For contributing bug fixes and new features please file
 an issue.
 
 # License
-The `gophers.dev/cmds/uuid-tool` module is open source under the [MIT](LICENSE) license.
+The `github.com/shoenig/uuid-tool` module is open source under the [MIT](LICENSE) license.
