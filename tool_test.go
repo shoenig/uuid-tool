@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/shoenig/test"
+	"github.com/shoenig/test/must"
 )
 
 func Test_name(t *testing.T) {
@@ -13,7 +13,7 @@ func Test_name(t *testing.T) {
 
 	try := func(t *testing.T, input, exp string) {
 		result := name(input)
-		test.EqCmp(t, exp, result)
+		must.Eq(t, exp, result)
 	}
 
 	t.Run("relative path", func(t *testing.T) {
@@ -31,11 +31,11 @@ func Test_generateOne(t *testing.T) {
 	try := func(t *testing.T, newline bool) {
 		var buf bytes.Buffer
 		err := generateOne(&buf, newline)
-		test.NoError(t, err)
+		must.NoError(t, err)
 		result := buf.String()
-		test.EqCmp(t, 37, len(result))
+		must.Eq(t, 37, len(result))
 		endsNewline := strings.HasSuffix(result, "\n")
-		test.EqCmp(t, newline, endsNewline)
+		must.Eq(t, newline, endsNewline)
 	}
 
 	t.Run("with newline", func(t *testing.T) {
@@ -52,7 +52,7 @@ func Test_generate(t *testing.T) {
 
 	var buf bytes.Buffer
 	err := generate(&buf, 10, true)
-	test.NoError(t, err)
+	must.NoError(t, err)
 	result := buf.String()
-	test.EqCmp(t, 37*10, len(result))
+	must.Eq(t, 37*10, len(result))
 }

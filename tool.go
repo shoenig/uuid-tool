@@ -6,7 +6,7 @@ import (
 	"io"
 	"path/filepath"
 
-	uuid "github.com/hashicorp/go-uuid"
+	"github.com/hashicorp/go-uuid"
 	"github.com/pkg/errors"
 )
 
